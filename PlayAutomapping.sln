@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlayAutomapping", "PlayAutomapping\PlayAutomapping.csproj", "{8F6BEFBC-4F8B-4D42-876B-C76266BB6A69}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTest", "UnitTest\UnitTest.csproj", "{8A5BF0FE-7FD9-4FBC-850A-F60C1B96707F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DomainMapping", "DomainMapping\DomainMapping.csproj", "{3638700C-9C7D-49D1-89E6-75886BA2665C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8F6BEFBC-4F8B-4D42-876B-C76266BB6A69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F6BEFBC-4F8B-4D42-876B-C76266BB6A69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F6BEFBC-4F8B-4D42-876B-C76266BB6A69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F6BEFBC-4F8B-4D42-876B-C76266BB6A69}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A5BF0FE-7FD9-4FBC-850A-F60C1B96707F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A5BF0FE-7FD9-4FBC-850A-F60C1B96707F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A5BF0FE-7FD9-4FBC-850A-F60C1B96707F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A5BF0FE-7FD9-4FBC-850A-F60C1B96707F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3638700C-9C7D-49D1-89E6-75886BA2665C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3638700C-9C7D-49D1-89E6-75886BA2665C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3638700C-9C7D-49D1-89E6-75886BA2665C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3638700C-9C7D-49D1-89E6-75886BA2665C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

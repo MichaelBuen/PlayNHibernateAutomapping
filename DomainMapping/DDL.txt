@@ -1,0 +1,102 @@
+﻿/*
+
+drop table TableNotOnSchema;
+
+drop table Production.Product;
+drop table Production.ProductCategory;
+drop table Person.Hobby;
+drop table Person.Person;
+
+drop schema Production;
+drop schema Person;
+
+*/
+
+
+create schema Person;
+go
+create schema Production;
+go
+
+
+
+
+create table Person.Person
+(
+	PersonId int identity(1,1) not null,
+
+	PersonName nvarchar(100) not null,
+
+	constraint pk_Person_Person primary key(PersonId)
+);
+
+
+create table Person.Hobby
+(
+	PersonId int not null,
+
+	HobbyId int identity(1,1) not null,
+	HobbyDescription nvarchar(100) not null,	
+
+
+	constraint pk_Person_Hobby primary key(HobbyId),
+
+	constraint fk_Person_Hobby__Person_Person foreign key(PersonId) references Person.Person(PersonId)
+);
+
+
+
+create table Production.ProductCategory
+(
+	ProductCategoryId int identity(1,1) not null,
+
+	ProductCategoryName nvarchar(100) not null,
+
+	constraint pk_Production_ProductCategory primary key(ProductCategoryId)
+);
+
+create table Production.Product
+(
+	ProductId int identity(1,1),
+
+	ProductCategoryId int not null, 
+
+	ProductName nvarchar(50) not null,
+
+	constraint pk_Production_Product primary key(ProductId),
+
+	constraint fk_Production_Product__Production_ProductCategory foreign key(ProductCategoryId) references Production.ProductCategory(ProductCategoryId)
+);
+
+
+go
+
+insert into Production.ProductCategory(ProductCategoryName) values ('Car');
+insert into Production.ProductCategory(ProductCategoryName) values ('Shoe');
+insert into Production.ProductCategory(ProductCategoryName) values ('Gadget');
+
+insert into Production.Product(ProductName, ProductCategoryId) values ('Tesla', 1);
+
+
+insert into Person.Person(PersonName) values('Linus');
+insert into Person.Person(PersonName) values('Bill');
+
+insert into Person.Hobby(PersonId, HobbyDescription) values
+(1, 'Kernel Development'),
+(2, 'Git Committing');
+
+
+insert into Person.Hobby(PersonId, HobbyDescription) values
+(1, 'Building an empire');
+
+
+go
+
+
+create table TableNotOnSchema
+(
+	Id int identity(1,1) primary key,
+	TheValue nvarchar(100) not null
+);
+
+insert into TableNotOnSchema(TheValue) values('Something');
