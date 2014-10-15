@@ -83,11 +83,11 @@ insert into Person.Person(PersonName) values('Bill');
 
 insert into Person.Hobby(PersonId, HobbyDescription) values
 (1, 'Kernel Development'),
-(2, 'Git Committing');
+(1, 'Git Committing');
 
 
 insert into Person.Hobby(PersonId, HobbyDescription) values
-(1, 'Building an empire');
+(2, 'Building an empire');
 
 
 go
